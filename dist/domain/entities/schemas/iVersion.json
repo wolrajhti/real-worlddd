@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "$id": "https://ts-sandbox/domain/entities/schemas/IVersion.json",
+    "properties": {
+        "_id": { "type": "string", "format": "uuid" },
+        "indice": { "type": "number", "multipleOf": 1 },
+        "visas": {
+            "type": "array",
+            "items": { "$ref": "../../valueObjects/schemas/IVisa.json" },
+            "uniqueItems": true
+        },
+        "topVisa": { "$ref": "../../valueObjects/schemas/IVisa.json" }
+    },
+    "required": ["indice", "visas"],
+    "additionalProperties": false
+}

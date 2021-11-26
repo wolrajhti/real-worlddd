@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "$id": "https://ts-sandbox/domain/valueObjects/schemas/IVisa.json",
+    "properties": {
+        "authorId": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "statusId": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "comment": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 2048
+        }
+    },
+    "required": ["authorId", "statusId"],
+    "additionalProperties": false
+}
